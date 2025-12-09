@@ -6,7 +6,7 @@
   <title>LocalShop | Shop Smarter, Save Better</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
   <header class="nav-shell">
@@ -218,25 +218,30 @@
       const timeEl = document.getElementById("clock-time");
       const dayEl = document.getElementById("clock-day");
 
-      function pad(num) {
-        return num.toString().padStart(2, "0");
-      }
+      if (!timeEl || !dayEl) return;
+
+      const timeFormatter = new Intl.DateTimeFormat([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+      const dayFormatter = new Intl.DateTimeFormat([], {
+        weekday: "long",
+        month: "long",
+        day: "numeric"
+      });
 
       function updateClock() {
         const now = new Date();
-        const hours = pad(now.getHours());
-        const minutes = pad(now.getMinutes());
-        const seconds = pad(now.getSeconds());
-        timeEl.textContent = `${hours}:${minutes}:${seconds}`;
-        dayEl.textContent = now.toLocaleDateString(undefined, {
-          weekday: "long",
-          month: "long",
-          day: "numeric"
-        });
+        timeEl.textContent = timeFormatter.format(now);
+        dayEl.textContent = dayFormatter.format(now);
       }
 
       updateClock();
       setInterval(updateClock, 1000);
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) updateClock();
+      });
     })();
   </script>
 </body>
