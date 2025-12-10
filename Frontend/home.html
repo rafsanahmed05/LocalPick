@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalPick | Shop Smarter, Save Better</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="static/css/home-extras.css">
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="container nav-bar">
+      <div class="brand">
+        <i class="bi bi-bag-check-fill"></i>
+        <span class="brand-name">LocalPick</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#products">Shop Now</a>
+        <a href="#about">About LocalPick</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="ghost-btn" href="auth/login.html">Login</a>
+        <a class="primary-btn" href="auth/register.html">Register</a>
+        <div class="clock">
+          <span class="time" id="clock-time">--:--:--</span>
+          <span class="day" id="clock-day">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sale-banner">
+    <p>Welcome to LocalPick! Up to 40% OFF on selected items! Limited Time Offer</p>
+  </div>
+
+  <main>
+    <section class="news-ticker-container">
+      <div class="news-ticker">
+        <div class="ticker-content">
+          <span>Hot Deal: Get 20% off on Electronics</span>
+          <span> New Arrivals: Latest Fashion Collection</span>
+          <span>Free Delivery on orders over ৳1000</span>
+          <span> Mobile Accessories starting from ৳299</span>
+          <span> Limited Time: Buy 1 Get 1 Free on selected items</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="container">
+        <div class="slider" id="shop-slider">
+          <div class="slides">
+            <article class="slide active">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80" alt="Electronics Store">
+              <div class="caption">
+                <h3>Electronics Store</h3>
+                <p>Find the latest gadgets and electronics.</p>
+              </div>
+            </article>
+            <article class="slide">
+              <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1600&q=80" alt="Fashion Boutique">
+              <div class="caption">
+                <h3>Fashion Boutique</h3>
+                <p>Trendy clothes and accessories.</p>
+              </div>
+            </article>
+            <article class="slide">
+              <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=1600&q=80" alt="Home Decor">
+              <div class="caption">
+                <h3>Home Decor</h3>
+                <p>Beautiful items for your home.</p>
+              </div>
+            </article>
+            <article class="slide">
+              <img src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?auto=format&fit=crop&w=1600&q=80" alt="Book Store">
+              <div class="caption">
+                <h3>Book Store</h3>
+                <p>Explore our collection of books.</p>
+              </div>
+            </article>
+          </div>
+          <button class="slider-control prev" aria-label="Previous slide">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="slider-control next" aria-label="Next slide">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+          <div class="slider-dots" aria-label="Slide indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-wrap">
+      <div class="container search-card">
+        <div class="search-tabs">
+          <button class="tab active"><i class="bi bi-grid-1x2-fill"></i> All</button>
+          <button class="tab"><i class="bi bi-box-seam"></i> Products</button>
+          <button class="tab"><i class="bi bi-shop"></i> Shops</button>
+        </div>
+        <div class="search-row">
+          <input type="text" placeholder="Search for products, shops, or locations...">
+          <button class="primary-btn">Search</button>
+        </div>
+        <div class="search-options">
+          <label class="location">
+            <input type="checkbox" checked>
+            <span>Use my location</span>
+          </label>
+          <div class="tags">
+            <span>Popular:</span>
+            <button class="tag">Electronics</button>
+            <button class="tag">Fashion</button>
+            <button class="tag">Groceries</button>
+            <button class="tag">Local Shops</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why Choose LocalPick?</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon-circle"><i class="bi bi-geo-alt"></i></div>
+            <h3>Local Shop Discovery</h3>
+            <p>Find the best local shops near you with real-time inventory tracking.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-circle"><i class="bi bi-stars"></i></div>
+            <h3>Smart Negotiation</h3>
+            <p>AI-powered price negotiation to unlock the best deals automatically.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-circle"><i class="bi bi-truck"></i></div>
+            <h3>Fast Delivery</h3>
+            <p>Express delivery within 24 hours to your doorstep.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+            <h3>Secure Shopping</h3>
+            <p>100% secure payments with buyer protection on every order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <h2>Ready to Start Shopping?</h2>
+          <p>Join thousands of happy customers saving time and money with LocalPick.</p>
+        </div>
+        <button class="primary-btn large">Create Account</button>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+        </div>
+        <div class="product-slider" id="product-slider">
+          <button class="prod-control prev" aria-label="Previous products"><i class="bi bi-chevron-left"></i></button>
+          <div class="product-track">
+            <div class="product-slide">
+              <article class="product-card">
+                <div class="badge in-stock">In Stock</div>
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Smart Watch">
+                <h3>Smart Watch Pro</h3>
+                <p>Experience premium quality and style.</p>
+                <div class="price-row">
+                  <span class="price">$299.99</span>
+                  <button class="ghost-btn">Add to Cart</button>
+                </div>
+              </article>
+            </div>
+
+            <div class="product-slide">
+              <article class="product-card">
+                <div class="badge in-stock">In Stock</div>
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80" alt="Wireless Earbuds">
+                <h3>Wireless Earbuds</h3>
+                <p>Premium sound with seamless pairing.</p>
+                <div class="price-row">
+                  <span class="price">$149.99</span>
+                  <button class="ghost-btn">Add to Cart</button>
+                </div>
+              </article>
+            </div>
+
+            <div class="product-slide">
+              <article class="product-card">
+                <div class="badge out">Out of Stock</div>
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Backpack">
+                <h3>Premium Backpack</h3>
+                <p>Durable build with modern design.</p>
+                <div class="price-row">
+                  <span class="price">$89.99</span>
+                  <button class="ghost-btn" disabled>Out of Stock</button>
+                </div>
+              </article>
+            </div>
+
+            <div class="product-slide">
+              <article class="product-card">
+                <div class="badge in-stock">In Stock</div>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Designer Sunglasses">
+                <h3>Designer Sunglasses</h3>
+                <p>Timeless frames with UV protection.</p>
+                <div class="price-row">
+                  <span class="price">$199.99</span>
+                  <button class="ghost-btn">Add to Cart</button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="prod-control next" aria-label="Next products"><i class="bi bi-chevron-right"></i></button>
+          <div class="product-dots" aria-label="Product slide indicators"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="includes/footer.html" id="contact"></div>
+
+  <script src="static/js/includes.js"></script>
+  <script src="static/js/home-extras.js"></script>
+  <script>
+    (function () {
+      const timeEl = document.getElementById("clock-time");
+      const dayEl = document.getElementById("clock-day");
+
+      function pad(num) {
+        return num.toString().padStart(2, "0");
+      }
+
+      function updateClock() {
+        const now = new Date();
+        const hours = pad(now.getHours());
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+        timeEl.textContent = `${hours}:${minutes}:${seconds}`;
+        dayEl.textContent = now.toLocaleDateString(undefined, {
+          weekday: "long",
+          month: "long",
+          day: "numeric"
+        });
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    })();
+  </script>
+</body>
+</html>
